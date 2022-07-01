@@ -1,18 +1,6 @@
 #include <iostream>
 using namespace std;
 
-bool isSorted(int (&array)[15])
-{
-    for (int i = 0; i < sizeof(array) / sizeof(array[0]) - 1; i++)
-    {
-        if (array[i] > array[i + 1])
-        {
-            return false;
-        }
-    }
-    return true;
-}
-
 void writeSortedArray(int (&sortedArray)[15])
 {
     for (int i = 0; i < sizeof(sortedArray) / sizeof(sortedArray[0]); i++)
