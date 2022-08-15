@@ -83,11 +83,9 @@ int main()
     insert(bTRoot, 6);
     insert(bTRoot, 7);
     insert(bTRoot, 8);
-    // insert(bTRoot, 12);
     preorderPBT(bTRoot);
     if (isPerfectBinaryTree(bTRoot))
     {
-
         cout << "This tree is perfect tree";
     }
     else
