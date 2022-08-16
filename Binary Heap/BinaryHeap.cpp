@@ -97,38 +97,74 @@ void maxHeapify(Node *root)
     }
 }
 
+void minHeapify(Node *root)
+{
+    if (root != NULL)
+    {
+        if (root->left != NULL)
+        {
+            if (root->left->data < root->data)
+            {
+                int temp = root->data;
+                root->data = root->left->data;
+                root->left->data = temp;
+                minHeapify(bTRoot);
+            }
+            else
+            {
+                minHeapify(root->left);
+            }
+        }
+        if (root->right != NULL)
+        {
+            if (root->right->data < root->data)
+            {
+
+                int temp = root->data;
+                root->data = root->right->data;
+                root->right->data = temp;
+                minHeapify(bTRoot);
+            }
+            else
+            {
+                minHeapify(root->right);
+            }
+        }
+    }
+}
+
 int main()
 {
 
     insert(bTRoot, 51);
-    maxHeapify(bTRoot);
+    minHeapify(bTRoot);
 
     insert(bTRoot, 80);
-    maxHeapify(bTRoot);
+    minHeapify(bTRoot);
 
     insert(bTRoot, 79);
-    maxHeapify(bTRoot);
+    minHeapify(bTRoot);
 
     insert(bTRoot, 18);
-    maxHeapify(bTRoot);
+    minHeapify(bTRoot);
 
     insert(bTRoot, 32);
-    maxHeapify(bTRoot);
+    minHeapify(bTRoot);
 
     insert(bTRoot, 89);
-    maxHeapify(bTRoot);
+    minHeapify(bTRoot);
 
     insert(bTRoot, 74);
-    maxHeapify(bTRoot);
+    minHeapify(bTRoot);
 
     insert(bTRoot, 12);
-    maxHeapify(bTRoot);
+    minHeapify(bTRoot);
 
     preorderBHT(bTRoot);
 
-    //               89
-    //         79          85
-    //     74      18    32    80
-    // 51      12
+    //               12
+    //         18          32
+    //     51      79    80    89
+    // 85      74
     return 0;
 }
