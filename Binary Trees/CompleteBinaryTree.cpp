@@ -81,7 +81,6 @@ void preorderCBT(Node *root)
 
 int main()
 {
-    int items[] = {85, 51, 80, 79, 18, 32, 89, 74, 12};
     Node *bTRoot = new Node(85);
     insert(bTRoot, 51);
     insert(bTRoot, 80);
