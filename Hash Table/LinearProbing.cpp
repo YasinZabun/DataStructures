@@ -5,8 +5,6 @@ void LinearProbing(int *hashTable, int hashTableLength, int *valuesToBeHashed, i
 {
     if (valuesToBeHashedLength <= hashTableLength)
     {
-        cout<<hashTable[2];
-        int step;
         int indexToBeHashed;
         for (int i = 0; i < valuesToBeHashedLength; i++)
         {
